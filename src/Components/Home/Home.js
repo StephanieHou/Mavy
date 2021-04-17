@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Main } from "../Styled";
 
 const Home = () => {
-
   return (
-    <div className='Home'>
+    <Main className="Home">
       <p>Home</p>
-    </div>
+    </Main>
   );
 };
 

@@ -1,29 +1,16 @@
-import React, { useEffect, useState } from "react";
-import app from "../firebase";
+import React from 'react';
+import { useUser } from 'reactfire';
+import Signup from './Signup';
+import Login from './Login';
+import Logout from './Logout';
 
-export const AuthContext = React.createContext();
-
-export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null);
-  const [pending, setPending] = useState(true);
-
-  useEffect(() => {
-    app.auth().onAuthStateChanged((user) => {
-      setCurrentUser(user);
-      setPending(false);
-    });
-  }, []);
-
-  if (pending) {
-    return <>Please wait...</>;
-  }
+function Auth() {
   return (
-    <AuthContext.Provider
-      value={{
-        currentUser,
-      }}
-    >
-      {children}
-    </AuthContext.Provider>
+    <div className="App">
+        <Login/>
+        <Signup/>
+    </div>
   );
-};
+}
+
+export default Auth;
