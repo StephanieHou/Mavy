@@ -1,33 +1,13 @@
-import { CSSProperties, ReactNode } from "react";
 import styled from "styled-components";
 
-const Container = styled.div`
-    position: absolute;
-    top: -215px; 
-    right: 0px;
+const FooterDiv = styled.div`
+  background: ${({ background }) => background || `white`};
+  width: ${({ width }) => width || `100%`};
+  height: ${({ height }) => height || `auto`};
 `;
 
-export default function Footer(
-    src,
-    color,
-    width = undefined,
-    height = undefined,
-    alt = src,
-    children = null,
-    style = {},
-    ...props) {
-    return (
-        <Container
-            style={{
-                background: color,
-                mask: `url(/${src}) center/contain no-repeat`,
-                WebkitMask: `url(/${src}) center/contain no-repeat`,
-                width,
-                height,
-                ...style,
-            }}
-            {...props}
-        >
-        </Container>
-    );
-}
+const Footer = ({ background, width, height }) => {
+  return <FooterDiv background={background} width={width} height={height} />;
+};
+
+export default Footer;

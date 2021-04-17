@@ -1,1 +1,29 @@
+@font-face {
+  font-family: "MontserratSubrayada-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("MontserratSubrayada-Bold"),
+    url("./Components/Fonts/MontserratSubrayada-Bold.ttf") format("truetype");
+}
 
+@font-face {
+  font-family: "MontserratSubrayada-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("MontserratSubrayada-Regular"),
+    url("./Components/Fonts/MontserratSubrayada-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0px;
+
+  --color-1: #87315f;
+  --color-2: #b4417e;
+  --color-3: #c9699c;
+  --color-4: #d487b0;
+  --color-5: #fbc04f;
+}
+
+a {
+  text-decoration: none;
+}
