@@ -14,6 +14,18 @@
     url("./Components/Fonts/MontserratSubrayada-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Montserrat"),
+    url("./Components/Fonts/Montserrat.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0px;
 
@@ -24,6 +36,43 @@ body {
   --color-5: #fbc04f;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "MontserratSubrayada-Regular";
+}
+
+p {
+  font-family: "Montserrat";
+}
+
 a {
+  font-family: "Montserrat";
   text-decoration: none;
+}
+
+button {
+  font-family: "Montserrat";
+}
+
+.Home .Logout-Link,
+.Login .Auth-Links,
+.Signup .Auth-Links,
+.Account-Dashboard .Login-Link,
+.Account-Dashboard .Signup-Link {
+  display: none;
+}
+
+@keyframes downArrow {
+  0% {
+    opacity: 0;
+    transform: translate(-10px, -10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
 }

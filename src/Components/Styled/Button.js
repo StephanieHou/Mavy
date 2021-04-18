@@ -11,7 +11,7 @@ export default styled.button`
   font-weight: bold;
   font-size: 15px;
 
-  &:hover{
+  &:hover {
     background-color: var(--color-5);
     color: var(--color-2);
   }

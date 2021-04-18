@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "./index";
 import Logo from "../../Images/Logo.png";
+import Logout from "../../Auth/Logout";
 
 const Container = styled.div`
   width: 100%;
@@ -56,9 +57,7 @@ const Links = styled.p`
   font-size: 15px;
 `;
 
-export default function Navbar(
-  logged
-) {
+export default function Navbar(logged) {
   return (
     <Container className="Navbar">
       <Wrapper>
@@ -67,13 +66,14 @@ export default function Navbar(
           <LogoText>MAVY</LogoText>
         </LogoDiv>
         <LinkDiv>
-          <LinkWrapper>
-            <Link to="/login">
+          <LinkWrapper className="Auth-Links">
+            <Link to="/login" className="Login-Link">
               <Links>Log In</Links>
             </Link>
-            <Link to="/signup">
+            <Link to="/signup" className="Signup-Link">
               <Button>Sign Up</Button>
             </Link>
+            <Logout />
           </LinkWrapper>
         </LinkDiv>
       </Wrapper>
