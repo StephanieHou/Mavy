@@ -1,0 +1,23 @@
+type Transaction {
+  id: ID!
+  username: String!
+  company: String
+  category: String
+  amount: String
+  date: String
+}
+
+# type Company
+
+type Query {
+  transactions(username: String!): Transaction
+    @rest(
+      endpoint: "https://mavy-b0112-default-rtdb.firebaseio.com/$username/transactions.json"
+    )
+}
+
+# query Transactions($username: String="michael") {
+#   transactions(username: $username) {
+#     amount
+#   }
+# }
