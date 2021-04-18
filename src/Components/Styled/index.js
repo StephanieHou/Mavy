@@ -5,3 +5,4 @@ export { default as Grid } from "./Grid";
 export { default as Navbar } from "./Navbar";
 export { default as Section } from "./Section";
 export { default as Sidebar } from "./Sidebar";
+export { default as AnimatedText} from "./AnimatedText";
