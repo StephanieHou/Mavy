@@ -41,7 +41,12 @@ const Links = styled.p`
 
 const Footer = ({ background, width, height }) => {
   return (
-    <FooterDiv background={background} width={width} height={height}>
+    <FooterDiv
+      background={background}
+      width={width}
+      height={height}
+      className="Footer"
+    >
       <Image src={Logo} alt="Mavy Footer Logo" />
       <LogoText>MAVY</LogoText>
       <LinkDiv>
