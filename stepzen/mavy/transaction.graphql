@@ -1,0 +1,34 @@
+type Transaction {
+  username: String
+  company: String
+  category: String
+  amount: String
+  purchaseDate: String
+}
+
+# type Company
+
+type Query {
+  getTransactionIds(username: String!): Transaction
+    @rest(
+      endpoint: "https://mavy-b0112-default-rtdb.firebaseio.com/$username/transactions.json"
+    )
+  getTransactionById(username: String!, id: String!): Transaction
+    @rest(
+      endpoint: "https://mavy-b0112-default-rtdb.firebaseio.com/$username/transactions/$id.json"
+    )
+}
+
+type Mutation {
+  transaction(username: String!): Transaction
+}
+
+# query {
+#   getTransactions(username: "mfuery") {
+#     username
+#     amount
+#     company
+#     category
+#     purchaseDate
+#   }
+# }
